@@ -1,0 +1,233 @@
+/* -------------------------------
+   PALETTE & VARIABILI
+--------------------------------*/
+:root {
+  --red: #d63031;
+  --gold: #ffcc70;
+  --cream: #fff8f0;
+  --green: #27ae60;
+  --dark: #1e1e1e;
+  --gray-light: #f2f2f2;
+  --gray-dark: #444;
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* -------------------------------
+   RESET BASE
+--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--cream);
+  color: var(--dark);
+  scroll-behavior: smooth;
+  line-height: 1.5;
+}
+
+/* -------------------------------
+   HEADER
+--------------------------------*/
+header {
+  text-align: center;
+  padding: 2.5em 1em 1.5em;
+  background: linear-gradient(135deg, var(--red), #ff5252);
+  color: #fff;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+header .logo {
+  width: 110px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+  margin-bottom: 10px;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3em;
+}
+
+.lead {
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+/* -------------------------------
+   NAV BUTTONS
+--------------------------------*/
+nav.nav-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+nav.nav-buttons a {
+  background: var(--red);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+nav.nav-buttons a:hover {
+  background: var(--green);
+  transform: translateY(-2px);
+}
+
+/* -------------------------------
+   MAIN SECTION
+--------------------------------*/
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+section {
+  background: #fff;
+  margin: 20px 0;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+section:hover {
+  transform: scale(1.01);
+}
+
+h2 {
+  color: var(--red);
+  border-left: 5px solid var(--gold);
+  padding-left: 10px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* -------------------------------
+   MENU ITEMS
+--------------------------------*/
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.price {
+  color: var(--green);
+  font-weight: 600;
+  float: right;
+  margin-top: -22px;
+}
+
+.item-desc {
+  font-size: 0.875rem;
+  color: var(--gray-dark);
+  margin-top: 4px;
+}
+
+.small-note {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* -------------------------------
+   ORDINE BUTTON
+--------------------------------*/
+.ordine button {
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ordine button:hover {
+  background: #219150;
+  transform: translateY(-2px);
+}
+
+/* -------------------------------
+   FOOTER
+--------------------------------*/
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--dark);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* -------------------------------
+   ANIMATIONS
+--------------------------------*/
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/* -------------------------------
+   RESPONSIVE
+--------------------------------*/
+@media (max-width: 768px) {
+  h1 { font-size: 1.7rem; }
+  h2 { font-size: 1.3rem; }
+  nav.nav-buttons a {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+  .price {
+    float: none;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  header { padding: 2em 0 1em; }
+  header .logo { width: 90px; }
+  nav.nav-buttons { gap: 5px; }
+  section { padding: 15px 15px; }
+  .menu-item { font-size: 0.9rem; }
+}
