@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pizzeria ElDorado 🍕</title>
+
+<!-- FONT + ICONS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+:root {
+  --red: #d63031;
+  --gold: #ffcc70;
+  --cream: #fff8f0;
+  --green: #27ae60;
+  --dark: #1e1e1e;
+  --shadow: rgba(0,0,0,0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  scroll-behavior: smooth;
+  line-height: 1.5;
+}
+
+header {
+  text-align: center;
+  padding: 2.5em 1em 1.5em;
+  background: linear-gradient(135deg, var(--red), #ff5252);
+  color: white;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+header .logo {
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 12px rgba(255,255,255,0.5);
+  margin-bottom: 10px;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+header .lead {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+nav.nav-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+nav.nav-buttons a {
+  background: var(--red);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+nav.nav-buttons a:hover {
+  background: var(--green);
+}
+
+main {
+  padding: 20px 10px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px var(--shadow);
+  transition: transform 0.2s;
+}
+
+section:hover {
+  transform: scale(1.01);
+}
+
+h2 {
+  color: var(--red);
+  border-left: 5px solid var(--gold);
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item .item-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.menu-item .price {
+  color: var(--green);
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.menu-item .item-desc {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 2px;
+}
+
+.small-note {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--dark);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.5rem; }
+  nav.nav-buttons { gap: 5px; }
+  .menu-item { font-size: 0.95rem; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.jpeg" alt="Logo Pizzeria ElDorado" class="logo" />
+  <h1>Pizzeria ElDorado</h1>
+  <p class="lead">Asporto e consegna a domicilio</p>
+</header>
+
+<nav class="nav-buttons">
+  <a href="#special-1">🍕 Special</a>
+  <a href="#classiche-full">Classiche</a>
+  <a href="#calzoni-panzerotti">Calzoni</a>
+  <a href="#pucce-full">🥪 Pucce</a>
+  <a href="#fritture-full">Fritture</a>
+  <a href="#bevande-full">🥤 Bevande</a>
+  <a href="#allergeni">Allergeni</a>
+</nav>
+
+<main>
+  <!-- Special -->
+  <section id="special-1">
+    <h2>Menù Eldorado — Special</h2>
+    <div class="menu-item"><span class="item-title">Sfiziosa</span><span class="price">€10,00</span><span class="item-desc">mozzarella, burrata (7), capocollo di Martina, cipolla fritta, olive taggiasche.</span></div>
+    <div class="menu-item"><span class="item-title">Imperiale</span><span class="price">€10,00</span><span class="item-desc">pomodoro, mozzarella (7), capocollo di Martina, burrata (7), 'nduja, taralli sbriciolati.</span></div>
+    <div class="menu-item"><span class="item-title">Divina</span><span class="price">€8,00</span><span class="item-desc">mozzarella (7), mortadella (1)(7), olive taggiasche, provola piccante (7).</span></div>
+    <div class="menu-item"><span class="item-title">La Rodrigo</span><span class="price">€8,00</span><span class="item-desc">pomodoro, mozzarella (7), salame piccante, 'nduja, peperoncino, olive taggiasche e taralli sbriciolati.</span></div>
+    <div class="menu-item"><span class="item-title">La Porchetta</span><span class="price">€8,00</span><span class="item-desc">mozzarella (7), porchetta, patate fritte (1), scamorza affumicata (7).</span></div>
+    <div class="menu-item"><span class="item-title">Della Nonna</span><span class="price">€9,00</span><span class="item-desc">pomodoro, mozzarella (7), ricotta forte (7), provola piccante (7), polpette fritte (1)(3)(7).</span></div>
+    <div class="menu-item"><span class="item-title">Kebab & Patate</span><span class="price">€7,50</span><span class="item-desc">pomodoro, mozzarella (7), kebab, patate (1).</span></div>
+    <div class="menu-item"><span class="item-title">Uccelletti & Patate</span><span class="price">€8,00</span><span class="item-desc">pomodoro, mozzarella (7), involtini di crudo e fior di latte (7), patate (1).</span></div>
+    <div class="menu-item"><span class="item-title">La deliziosa</span><span class="price">€9,00</span><span class="item-desc">mozzarella (7), burrata (7), pistacchi (5)(8), mortadella (1)(7).</span></div>
+    <div class="menu-item"><span class="item-title">Via Roma</span><span class="price">€9,50</span><span class="item-desc">pomodoro, mozzarella (7), porchetta, porcini (9)(12), burrata (7).</span></div>
+    <div class="menu-item"><span class="item-title">Valtellina</span><span class="price">€8,50</span><span class="item-desc">pomodoro, mozzarella (7), bresaola, rucola, grana (7).</span></div>
+    <p class="small-note">Nota: i numeretti in rosso sugli ingredienti si riferiscono agli allergeni.</p>
+  </section>
+
+  <!-- Altre sezioni (Special 2 e 3, Classiche, Calzoni, Pucce, Fritture, Bevande, Allergeni) -->
+  <!-- Puoi replicare la stessa struttura per tutte le sezioni come sopra -->
+</main>
+
+<footer>
+  <p>Orari: 19:30 – 23:30 | Tel: 328-1646105</p>
+  <p>Via Roma, 37, 74024 Manduria (TA)</p>
+  <p>© 2025 Pizzeria ElDorado</p>
+  <p><a href="https://t.me/PizzeriaEldoradoBot" target="_blank">Chatta con noi su Telegram</a></p>
+</footer>
+
+</body>
+</html>
